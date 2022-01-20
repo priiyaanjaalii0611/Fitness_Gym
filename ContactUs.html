@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <script src="https://kit.fontawesome.com/332a215f17.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <title>Contact Us Form</title>
+   <style>
+   body{
+    padding: 0px;
+    margin: 0px;  
+    font-family: sans-serif;
+  
+   }   
+
+
+ .container{
+      width: 90%;
+      margin: auto;
+      overflow: hidden;
+    }
+    /* contact form css */
+
+
+    #contact-section{
+      background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.9)),url(img/contact.jpg);
+      background-size: cover;
+      background-position: center;
+      height: 100%;
+      width: 100% ;
+      padding-bottom: 2%;
+    }
+
+    #contact-section .container h2{
+      text-align: center;
+       text-decoration: underline;
+        /* text-decoration-color:red; */
+        text-underline-position: under;
+        color: rgb(238, 235, 235);
+        letter-spacing: 2px;
+        
+    }
+
+    
+
+    #contact-section .container p{
+      text-align: center; 
+      width: 70%; 
+      margin-left: auto;
+       margin-right: auto; 
+       padding-bottom: 3%;
+       color: #fff;
+       letter-spacing:3px;
+    }
+
+    .contact-form i.fa{
+      /* color: red; */
+      /* color: #fff; */
+      font-size: 22px; 
+      padding: 3%;
+      background-color: none;
+      border-radius: 80%;
+      margin: 2%;
+      /* border: 2px solid #fff; */
+      cursor: pointer;
+      border:2px solid rgb(190, 190, 190);
+      color: rgb(190, 190, 190);
+    }
+    
+    .contact-form i.fa:hover{
+      cursor: pointer;
+      border:2px solid white;
+      color: white;
+    }
+     
+      .contact-form{
+        display: grid;
+        grid-template-columns: auto auto;
+         }
+      
+      .form-info{
+        font-size: 16px;
+        font-style: italic;
+        color: white;
+        letter-spacing: 2px;
+      }
+      input{
+        padding: 10px;
+        margin:10px;
+        width: 70%;
+        background-color:rgba(136, 133, 133, 0.5);
+        color: white;
+        border: none;
+        outline:none;
+      }
+
+
+      .social-icons{
+        flex: 1 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        list-style-type: none;
+        padding:0 20px;
+    }
+    .social-icons{
+        font-size: 40px;
+        padding: 15px;
+        margin: 20px;
+        margin-top: 40px;
+    }
+    .social-icons a:hover{
+        color: #e700e7;           
+        transform: translateY(-10%);
+        }
+
+
+    .social-icons i{
+        padding: 15px;
+        margin: 10px;
+    }   
+    
+
+
+
+
+
+      input::placeholder{
+        color: rgb(20, 19, 19);
+      }
+    
+       textarea{
+      padding: 10px;
+      margin: 10px;     
+      width: 70%;
+      background-color:rgba(136, 133, 133, 0.5);
+      color: rgb(20, 19, 19);
+      border: none;
+      outline:none;
+     }
+     textarea::placeholder{
+       color: rgb(17, 16, 16);
+     }
+     
+      
+    
+      .submit{
+      width: 40%;
+      background: none;
+      padding: 4px;
+      outline: none;
+       /* border: 1px solid #fff;
+      color: #fff; */
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      height: 33px;
+      text-align: center;
+      cursor: pointer;
+      letter-spacing: 2px;
+      margin-left: 3%;
+      border:2px solid rgb(190, 190, 190);
+      color: rgb(190, 190, 190);
+     }
+
+     .submit:hover{
+           border: 1px solid #fff;
+      color: #fff;
+      cursor: pointer;
+     }
+
+        /* media queries */
+    @media (max-width: 768px){
+
+ #contact-section .contact-form{
+        display: block;
+        width: 100%;
+        text-align: center;
+      }
+      #contact-section .submit{
+
+        width: 60%;
+      }
+
+  }
+
+  #subscribe{padding: 40px;background: #ffff;}
+#subscribe .title{font-size: 60px;text-transform: capitalize; color:#1b001b;
+text-align: center;margin: 25px 0 20px 0;}
+.input-group{width: 80vw;max-width: 600px;margin: 0 auto;display: flex;}
+.form-control{flex: 1 1 auto;}
+.form-control, .btn-submit{padding: 0.375rem 0.57rem;font-size: 1rem;
+line-height: 1.5;font-weight: 300;letter-spacing: mainSpacing;
+background: #ffff;text-transform: uppercase;outline: none;
+border: 1px solid #1b001b;}
+::placeholder{color: #1b001b;}
+.btn-submit{border-left: none;cursor: pointer;background: #1b001b;
+ color: #ffff;}
+.btn-submit:hover{color: #ffff;background-color: #4e004e;}
+
+/*=======end of Subscription==========*/
+/*=======Footer========*/
+footer{background-color:#1b001b;padding: 20px;display: flex;
+flex-wrap: wrap; justify-content: space-between; align-items: baseline;}
+.footer-text {text-transform: uppercase;font-size: 15px;color: #ffff;
+margin-bottom: 10px;}
+.terms{text-transform: uppercase;font-size: 15px;color: #ffff;
+margin-bottom: 10px; justify-content: space-between;}
+
+/*end of footer===========*/
+
+
+</style>
+
+    </head>
+     <body>
+   <!-- contact section -->
+         <section id="contact-section">
+           <div class="container">
+           	 <h2>Contact Us</h2>
+              <p>Email us and keep upto date with our latest news</p>
+             <div class="contact-form">
+
+                  <!-- First grid -->
+               <div>
+                 <i class="fa fa-map-marker"></i><span class="form-info">  145, Dharam Kanta Road, Mumbai</span><br>
+                 <i class="fa fa-phone" > </i><span class="form-info">  +9400034567890</span><br>
+                 <i class="fa fa-envelope"></i><span class="form-info">  fitnessCenter@Gmail.com</span>
+               </div>
+               
+                   <!-- second grid -->
+           <div>        
+             <form>
+               <input type="text" placeholder="Your Name" required>
+               <input type="text" placeholder="Last Name"><br>
+               <input type="Email" placeholder="Email" required><br>
+               <input type="text" placeholder="Subject of this message"><br>
+               <textarea name="message" placeholder="Message" rows="5" required></textarea><br>
+               <button class="submit" >Send Message</button> 
+             </form>   
+               </div>
+             </div>
+           </div>
+           <li class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+
+        </li>
+         </section>
+
+         <section class="subscribe" id="subscribe">
+            <!--title-============-->
+            <div>
+              <h3 class="title">Get More Info</h3>
+          </div>
+          <!--End of title===================-->
+         <form>
+             <div class="input-group">
+                 <input type="email" class="form-control" placeholder="Email">
+                 <button type="submit" class="btn-submit">Submit</button>
+             </div>
+         </form>
+      
+      </section>
+      <!--========End of subscription=========-->
+      <!---Footer===========-->
+      <footer>
+          <div class="footer-text">
+              <h4>Copy right &copy; 2021. All rights reserved</h4>
+          </div>
+          <div class="terms">
+              <h4>Privacy & Terms &nbsp; Contact</h4>
+          </div>
+          
+      </footer>
+      <!--=============End of Footer===========-->
+
+
+     </body>

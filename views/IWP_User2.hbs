@@ -1,0 +1,190 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>Training Details</TITLE>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+	:root
+	{
+		--green:#00b33c;
+	}
+	*{
+		font-family: 'Open Sans', sans-serif;
+		margin:0; padding: 0;
+		box-sizing: border-box;
+		transition: all .2s linear;
+		text-transform: capitalize;
+		outline: none;
+		text-decoration: none;
+	}
+	*::selection
+	{
+		background:var(--green);
+		color:#fff;
+	}
+	html
+	{
+		font-size: 62.5%;
+		overflow-x: hidden;
+	}
+	.heading
+	{
+		color:#333;
+		margin:1.5rem 0;
+		padding:1rem 0;
+		padding-top: 4rem;
+		font-size: 3rem;
+		border-bottom: .2rem solid var(--green);
+	}
+	.plan
+	{
+		min-height: 100vh;
+		text-align: center;
+	}
+	.plan .box-container
+	{
+		display: block;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+		border-style: solid;
+		border-color:green;
+	}
+	.plan .box-container .box
+	{
+		float:right;
+		border:solid green;
+		border-color:green;
+	   background:#fff;
+		margin:0rem;
+		width:25%;
+		height:50%;
+		box-shadow: 0 .3rem .5rem rgba(0,0,0,.3);
+	}
+	.plan .box-container .box .title
+	{
+		font-size: 2.5rem;
+		color:#00b33c;
+		padding:1rem 1rem;
+	}
+	.plan .box-container .box-trends .title
+	{
+		font-size: 2.5rem;
+		color:#00b33c;
+		padding:1rem 1rem;
+	}
+	.plan .box-container .box .content
+	{
+		margin:0rem 0rem;
+		font-size : 1.8rem;
+		text-align: justified;
+		padding:.5rem 1rem;
+	}
+	.plan .box-container .box-trends .content
+	{
+		margin:0rem 0rem;
+		list-style: disc;
+		font-size : 1.8rem;
+		float : right;
+		text-align: justified;
+		padding:.5rem 1rem;
+	}
+	.plan .box-container .box .content img
+	{
+		width: 120px;
+		height: 120px;
+		border-radius: 50%;
+		margin: 10px;
+		border: 5px solid rgb(170, 156, 156);
+	}
+	.plan .box-container .box-trends
+	{
+		background:#fff;
+		border:solid green;
+		margin:0rem;
+		width:100%;
+		height:100%;
+		box-shadow: 0 .3rem .5rem rgba(0,0,0,.3);
+	}
+	.plan .box-container .box-others .content img
+	{
+		width: 120px;
+		height: 120px;
+		border-radius: 50%;
+		margin: 10px;
+		border: 5px solid rgb(170, 156, 156);
+	}
+	.plan .box-container .box-others
+	{
+		background:#fff;
+		border: solid green;
+		float : left;
+		margin:0rem;
+		width:25%;
+		height:50%;
+		box-shadow: 0 .3rem .5rem rgba(0,0,0,.3);
+	}
+	.plan .box-container .box-others .content
+	{ 
+		margin:0rem 0rem;
+		list-style: disc;
+		font-size : 1.8rem;
+		text-align: justified;
+		padding:.5rem 1rem;
+	}
+	.plan .box-container .box-others .title
+	{ 
+		font-size: 2.5rem;
+		color:#00b33c;
+		padding:1rem 1rem;
+	}
+</style>
+</HEAD>
+<BODY>
+<section class="plan" id="plan">
+        <h1 class="heading">Your Training</h1>
+        <div class="box-container">
+            <div class="box-trends">
+                <h3 class="title">Daily Trends</h3>
+                <img src = "img/img10.jpg" height = "300px" width = "50%">
+				<div class = "content">
+				2nd April, 2021
+				<ul>
+					<li>Worked on the treadmill for 45 minutes </li>
+					<li>Pilates for 30 minutes</li>
+					<li>Swimming for 45 minutes</li>
+				</ul>
+				Total workout time: 2 Hours
+				</div>
+            </div>
+            <div class="box">
+                <h3 class="title">Our Experts Say</h3>
+                <div class="content"><img src = "img/img9.jpg">
+				<br/>Great going! Stay on the right track and focus on your diet plans and you will achieve your goal in no time. All the Best
+				</div>
+            </div>
+            <div class="box">
+                <h3 class="title">Recommended Diet Plan</h3>
+                <div class="content"><img src = "img/img7.jpg"><br/>
+				Eat vegetables, fruits, whole grains, fat-free or low-fat dairy products.<br/>
+				Limit saturated and trans fats, sodium, and added sugars.<br/>
+			</div>
+			</div>
+			<div class="box-others">
+                <h3 class="title">Goals</h3>
+				<div class="content"><img src = "img/img8.png"><br/>
+				To maintain current weight<br/>
+				To improve core strength<br/>
+				To exercise regularly<br/>
+				To improve body poisture
+				</div>
+			</div>
+			<div class="box-others">
+                <h3 class="title">Summary</h3>
+                <div class="content"><br/>Joined the club almost a year back for the purpose of weight management and lifestyle improvement.Undergoing nutritional counseling by experts and doing core workouts and aerobics to accomplish the desired results. Planning to inulge in outdoor sports like swimming. Interested in doing yoga later.
+				</div>
+			</div>
+		</div>
+    </section>
+</BODY>
+</HTML>

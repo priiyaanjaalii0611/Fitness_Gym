@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+	:root
+	{
+		--orange:#ff9f1a;
+	}
+	*{
+		font-family: 'Open Sans', sans-serif;
+		margin:0; padding: 0;
+		box-sizing: border-box;
+		transition: all .2s linear;
+		text-transform: capitalize;
+		outline: none;
+		text-decoration: none;
+	}
+	*::selection
+	{
+		background:var(--orange);
+		color:#fff;
+	}
+	html
+	{
+		font-size: 62.5%;
+		overflow-x: hidden;
+	}
+	.heading
+	{
+		display: inline-block;
+		color:#333;
+		margin:2rem 0;
+		padding:1rem 0;
+		padding-top: 8rem;
+		font-size: 3rem;
+		border-bottom: .2rem solid var(--orange);
+	}
+	.btn
+	{
+		cursor: pointer;
+		border:.2rem solid var(--orange);
+		color:var(--orange);
+		background:none;
+		padding:.5rem 3rem;
+		margin-top: 1rem;
+		position: relative;
+		z-index: 0;
+		font-size: 2rem;
+	}
+	.btn::before
+	{
+		content: '';
+		position: absolute;
+		top:0; left: 0;
+		height:100%;
+		width:100%;
+		background:var(--orange);
+		z-index: -1;
+		clip-path: circle(0% at 0% 0%);
+		transition: .3s;
+	}
+	.btn:hover::before
+	{
+		clip-path: circle(100%);
+	}
+	.btn:hover
+	{
+		color:#fff;
+	}
+	.service
+	{
+		min-height: 100vh;
+		text-align: center;
+	}
+	.service .box-container
+	{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+	.service .box-container .box
+	{
+		height:23rem;
+		width:35rem;
+		margin:1rem;
+		overflow: hidden;
+		position: relative;
+		cursor: pointer;
+	}
+	.service .box-container .box img
+	{
+		height:100%;
+		width:100%;
+		object-fit: cover;
+	}
+	.service .box-container .box .info
+	{
+		height:90%;
+		width:90%;
+		position: absolute;
+		top:50%; left:50%;
+		transform: translate(-50%, -50%) scale(0);
+		background:#fff;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-flow: column;
+	}
+	.service .box-container .box:hover .info
+	{
+		transform: translate(-50%, -50%) scale(1);
+	}
+	.service .box-container .box .info h3
+	{
+		font-size: 2.5rem;
+		color:#333;
+	}
+	.service .box-container .box .info p
+	{
+		font-size: 1.2rem;
+		color:#666;
+		padding:1rem 2rem;
+	}
+</style>
+</head>
+<body>
+<section class="service" id="service">
+    <h1 class="heading">our services</h1>
+    <div class="box-container">
+        <div class="box">
+            <img src="img/img1.jpg" alt="">
+            <div class="info">
+                <h3>treadmill</h3>
+                <p>Using a treadmill, you can reduce the risk of heart disease, diabetes, and joint related health problems. increases muscle strength and stamina and strength of bones too.</p>
+                <a href="#"><button class="btn">more</button></a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="img/img2.jpg" alt="">
+            <div class="info">
+                <h3>yoga</h3>
+                <p>Yoga improves strength, balance and flexibility. Slow movements and deep breathing increase blood flow and warm up muscles</p>
+                <a href="#"><button class="btn">more</button></a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="img/img3.jpg" alt="">
+            <div class="info">
+                <h3>trainer</h3>
+                <p> A trainer will ensure clients are performing exercises correctly and efficiently, in order to maximise results.</p>
+                <a href="#"><button class="btn">more</button></a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="img/img4.jpg" alt="">
+            <div class="info">
+                <h3>equipments</h3>
+                <p> Best equipment for Infrastructure machinery. Using a proper gym machine will help avoid injury. By controlling the path of motion the body gets a more efficient and safe workout.</p>
+                <a href="#"><button class="btn">more</button></a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="img/img5.jpg" alt="">
+            <div class="info">
+                <h3>boxing</h3>
+                <p>Boxing Improves Bone Mineral Density. Boxing is a great way to improve bone strength.  boxing will deliver the cardiovascular benefits</p>
+                <a href="#"><button class="btn">more</button></a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="img/img6.jpg" alt="">
+            <div class="info">
+                <h3>Weightlifting Area</h3>
+                <p>Get your body working in our free weights area</p>
+                <a href="#"><button class="btn">more</button></a>
+            </div>
+        </div>
+		<div class="box">
+            <img src="img/img11.jpg" alt="">
+            <div class="info">
+                <h3>Cyclings studio</h3>
+                <p> Ride to the rhythm of energetic music and reach higher levels of fitness, endurance and strength. </p>
+                <a href="#"><button class="btn">more</button></a>
+            </div>
+        </div>
+		<div class="box">
+            <img src="img/img12.jpg" alt="">
+            <div class="info">
+                <h3>Locker Room</h3>
+                <p> Get glammed up in our highly secure locker rooms when you're done with the grind. </p>
+                <a href="#"><button class="btn">more</button></a>
+            </div>
+        </div>
+		<div class="box">
+            <img src="img/img13.jpg" alt="">
+            <div class="info">
+                <h3>Lounge</h3>
+                <p> Relax after an intense workout in our lounge and enjoy its services includiing a free wifi</p>
+                <a href="#"><button class="btn">more</button></a>
+            </div>
+        </div>
+		<div class="box">
+            <img src="img/img14.jpg" alt="">
+            <div class="info">
+                <h3>Main studio</h3>
+                <p> Get your body grooving to the hippest beats with the various Group Fitness classes held in the... </p>
+                <a href="#"><button class="btn">more</button></a>
+            </div>
+        </div>
+		<div class="box">
+            <img src="img/img15.jpg" alt="">
+            <div class="info">
+                <h3>Playground</h3>
+                <p>Amp up your performance in our well-equipped Playground. </p>
+                <a href="#"><button class="btn">more</button></a>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>

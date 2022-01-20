@@ -1,0 +1,366 @@
+<HTML>
+<HEAD>
+<TITLE>Payments</TITLE>
+<link rel = "stylesheet" href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+<script src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js'></script>
+<link rel = "stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css'>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet">
+<style type ="text/css">
+	*{
+		margin: 0;
+		padding: 0
+	}
+	html 
+	{
+		height: 100%
+	}
+	body 
+	{
+		background-color: #000000
+	}
+	.card0 
+	{
+		margin: 40px 12px 15px 12px;
+		border: 0
+	}
+	.card1 
+	{
+		margin: 0;
+		padding: 15px;
+		padding-top: 25px;
+		padding-bottom: 0px;
+		background: #263238;
+		height: 100%
+	}
+	.bill-head 
+	{
+		color: #ffffff;
+		font-weight: bold;
+		margin-bottom: 0px;
+		margin-top: 0px;
+		font-size: 30px
+	}
+	.line 
+	{
+		border-right: 1px grey solid
+	}
+	.bill-date 
+	{
+		color: #BDBDBD
+	}
+	.red-bg 
+	{
+		margin-top: 25px;
+		margin-left: 0px;
+		margin-right: 0px;
+		background-color: #F44336;
+		padding-left: 20px !important;
+		padding: 25px 10px 25px 15px
+	}
+	#total 
+	{
+		margin-top: 0px;
+		padding-left: 7px
+	}
+	#total-label 
+	{
+		margin-bottom: 0px;
+		color: #ffffff;
+		padding-left: 7px
+	}
+	#heading1 
+	{
+		color: #ffffff;
+		font-size: 20px;
+		padding-left: 10px
+	}
+	#heading2 
+	{
+		font-size: 27px;
+		color: #D50000
+	}
+	.placeicon 
+	{
+		font-family: fontawesome !important
+	}
+	.card2 
+	{
+		padding: 25px;
+		margin: 0;
+		height: 100%
+	}
+	.form-card .pay 
+	{
+		font-weight: bold
+	}
+	.form-card input,.form-card textarea 
+	{
+		padding: 10px 8px 10px 8px;
+		border: none;
+		border: 1px solid lightgrey;
+		border-radius: 0px;
+		margin-bottom: 25px;
+		margin-top: 2px;
+		width: 100%;
+		box-sizing: border-box;
+		font-family: montserrat;
+		color: #2C3E50;
+		font-size: 14px;
+		letter-spacing: 1px
+	}
+	.form-card input:focus,.form-card textarea:focus 
+	{
+		-moz-box-shadow: none !important;
+		-webkit-box-shadow: none !important;
+		box-shadow: none !important;
+		border: none;
+		font-weight: bold;
+		border: 1px solid gray;
+		outline-width: 0
+	}
+	.btn-info 
+	{
+		color: #ffffff !important
+	}
+	.radio-group 
+	{
+		position: relative;
+		margin-bottom: 25px
+	}
+	.radio 
+	{
+		display: inline-block;
+		width: 204;
+		height: 64;
+		border-radius: 0;
+		background: lightblue;
+		box-sizing: border-box;
+		border: 2px solid lightgrey;
+		cursor: pointer;
+		margin: 8px 25px 8px 0px
+	}
+	.radio:hover 
+	{
+		box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.2)
+	}
+	.radio.selected 
+	{
+		box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.4)
+	}
+	.fit-image 
+	{
+		width: 100%;
+		object-fit: cover
+	}
+	.modal-confirm 
+	{		
+		color: #636363;
+		width: 325px;
+		margin: 30px auto;
+	}
+	.modal-confirm .modal-content 
+	{
+		padding: 20px;
+		border-radius: 5px;
+		border: none;
+	}
+	.modal-confirm .modal-header 
+	{
+		border-bottom: none;   
+		position: relative;
+	}
+	.modal-confirm h4 
+	{
+		text-align: center;
+		font-size: 26px;
+		margin: 30px 0 -15px;
+	}
+	.modal-confirm .form-control, .modal-confirm .btn 
+	{
+		min-height: 40px;
+		border-radius: 3px; 
+	}
+	.modal-confirm .close 
+	{
+		position: absolute;
+		top: -5px;
+		right: -5px;
+	}	
+	.modal-confirm .modal-footer 
+	{
+		border: none;
+		text-align: center;
+		border-radius: 5px;
+		font-size: 13px;
+	}	
+	.modal-confirm .icon-box 
+	{
+		color: #fff;		
+		position: absolute;
+		margin: 0 auto;
+		left: 0;
+		right: 0;
+		top: -70px;
+		width: 95px;
+		height: 95px;
+		border-radius: 50%;
+		z-index: 9;
+		background: #82ce34;
+		padding: 15px;
+		text-align: center;
+		box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+	}
+	.modal-confirm .icon-box i 
+	{
+		font-size: 58px;
+		position: relative;
+		top: 3px;
+	}
+	.modal-confirm.modal-dialog 
+	{
+		margin-top: 80px;
+	}
+	.modal-confirm .btn 
+	{
+		color: #fff;
+		border-radius: 4px;
+		background: #82ce34;
+		text-decoration: none;
+		transition: all 0.4s;
+		line-height: normal;
+		border: none;
+	}
+	.modal-confirm .btn:hover, .modal-confirm .btn:focus 
+	{
+		background: #6fb32b;
+		outline: none;
+	}
+	.trigger-btn 
+	{
+		display: inline-block;
+		margin: 100px auto;
+	}
+</style>
+</HEAD>
+<BODY>
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-12 col-lg-11">
+            <div class="card card0 rounded-0">
+                <div class="row">
+                    <div class="col-md-5 d-md-block d-none p-0 box">
+                        <div class="card rounded-0 border-0 card1" id="bill">
+                            <h3 id="heading1">Payment Summary</h3>
+                            <div class="row">
+                                <div class="col-lg-7 col-8 mt-4 line pl-4">
+                                    <h2 class="bill-head">Corporate Wellness Program</h2> <small class="bill-date">2021 Apr 04 at 10:30 PM</small>
+                                </div>
+                                <div class="col-lg-5 col-4 mt-4">
+                                    <h2 class="bill-head px-xl-5 px-lg-4">CWP</h2>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-7 col-8 mt-4 line pl-4">
+                                    <h2 class="bill-head">Full Services Membership</h2> <small class="bill-date">2021 Apr 04 at 10:30 PM</small>
+                                </div>
+                                <div class="col-lg-5 col-4 mt-4">
+                                    <h2 class="bill-head px-xl-5 px-lg-4">FAM</h2>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-7 col-8 mt-4 line pl-4">
+                                    <h2 class="bill-head">None</h2> <small class="bill-date">2021 Apr 04 at 10:32 PM</small><br>
+                                </div>
+                                <div class="col-lg-5 col-4 mt-4">
+                                    <h2 class="bill-head px-xl-5 px-lg-4">NOP</h2>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 red-bg">
+                                    <p class="bill-date" id="total-label">Total Price</p>
+                                    <h2 class="bill-head" id="total"><span>&#8377;</span>80,000</h2> <small class="bill-date" id="total-label">Price includes all taxes</small>
+									<p class="bill-date" id="total-label">Final Price</p>
+                                    <h2 class="bill-head" id="total"><span>&#8377;</span>76,000</h2> <small class="bill-date" id="total-label">After 10% discount on Membership fees</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-7 col-sm-12 p-0 box">
+                        <div class="card rounded-0 border-0 card2" id="paypage">
+                            <div class="form-card">
+                                <h2 id="heading2" class="text-danger">Payment Method</h2>
+                                <div class="radio-group">
+                                    <div class='radio' data-value="credit"><img src="https://i.imgur.com/28akQFX.jpg" width="200px" height="60px"></div>
+                                    <div class='radio' data-value="paypal"><img src="https://i.imgur.com/5QFsx7K.jpg" width="200px" height="60px"></div> <br>
+                                </div> <label class="pay">Name on Card</label> <input type="text" name="holdername" placeholder="Firstname Lastname">
+                                <div class="row">
+                                    <div class="col-8 col-md-6"> <label class="pay">Card Number</label> <input type="text" name="cardno" id="cr_no" placeholder="0000-0000-0000-0000" minlength="19" maxlength="19"> </div>
+                                    <div class="col-4 col-md-6"> <label class="pay">CVV</label> <input type="password" name="cvcpwd" placeholder="&#9679;&#9679;&#9679;" class="placeicon" minlength="3" maxlength="3"> </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12"> <label class="pay">Expiration Date</label> </div>
+                                    <div class="col-md-12"> <input type="text" name="exp" id="exp" placeholder="MM/YY" minlength="5" maxlength="5"> </div>
+                                </div>
+                                <div class="row">
+								<div class="text-center">
+	<a href="IWP_PaymentSuccess.html"" class="trigger-btn" data-toggle="modal">
+                                    <div class="col-md-6"> <input type="submit" value="MAKE A PAYMENT &nbsp; &#xf178;" class="btn btn-info placeicon"></a></div> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type = "text\javascript">
+$(document).ready(function(){
+//For Card Number formatted input
+var cardNum = document.getElementById('cr_no');
+cardNum.onkeyup = function (e) {
+if (this.value == this.lastValue) return;
+var caretPosition = this.selectionStart;
+var sanitizedValue = this.value.replace(/[^0-9]/gi, '');
+var parts = [];
+
+for (var i = 0, len = sanitizedValue.length; i < len; i +=4) { parts.push(sanitizedValue.substring(i, i + 4)); } for (var i=caretPosition - 1; i>= 0; i--) 
+{
+	var c = this.value[i];
+	if (c < '0' || c> '9') 
+	{
+		caretPosition--;
+	}
+}
+caretPosition += Math.floor(caretPosition / 4);
+this.value = this.lastValue = parts.join('-');
+this.selectionStart = this.selectionEnd = caretPosition;
+}
+//For Date formatted input
+var expDate = document.getElementById('exp');
+expDate.onkeyup = function (e) {
+if (this.value == this.lastValue) return;
+var caretPosition = this.selectionStart;
+var sanitizedValue = this.value.replace(/[^0-9]/gi, '');
+var parts = [];
+for (var i = 0, len = sanitizedValue.length; i < len; i +=2) { parts.push(sanitizedValue.substring(i, i + 2)); } for (var i=caretPosition - 1; i>= 0; i--) 
+{
+    var c = this.value[i];
+    if (c < '0' || c> '9') 
+	{
+        caretPosition--;
+    }
+}
+caretPosition += Math.floor(caretPosition / 2);
+this.value = this.lastValue = parts.join('/');
+this.selectionStart = this.selectionEnd = caretPosition;
+}
+// Radio button
+$('.radio-group .radio').click(function(){
+$(this).parent().find('.radio').removeClass('selected');
+$(this).addClass('selected');
+});
+})</script>
+</BODY>
+</HTML>

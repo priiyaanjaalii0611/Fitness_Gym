@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Center Reviews</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://kit.fontawesome.com/332a215f17.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700|Open+Sans" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<style>
+	*{
+		margin:0;
+		padding:0;
+		box-sizing: border-box;
+	}
+	body
+	{
+		font-family: 'Montserrat', sans-serif;
+	}
+	.carousel 
+	{
+		margin: 50px auto;
+		padding: 0 70px;
+	}
+	.carousel .item 
+	{
+		color: #999;
+		font-size: 14px;
+		text-align: center;
+		overflow: hidden;
+		min-height: 290px;
+	}
+	.carousel .testimonial 
+	{
+		padding: 30px 0 10px;
+	}
+	.carousel .overview 
+	{	
+		font-style: italic;
+	}
+	.carousel .overview b 
+	{
+		text-transform: uppercase;
+		color: #7AA641;
+	}
+	.carousel .carousel-control 
+	{
+		width: 40px;
+		height: 40px;
+		margin-top: -20px;
+		top: 50%;
+		background: none;
+	}
+	.carousel-control i 
+	{
+		font-size: 68px;
+		line-height: 42px;
+		position: absolute;
+		display: inline-block;
+		color: rgba(0, 0, 0, 0.8);
+		text-shadow: 0 3px 3px #e6e6e6, 0 0 0 #000;
+	}
+	.carousel .carousel-indicators 
+	{
+		bottom: -40px;
+	}
+	.carousel-indicators li, .carousel-indicators li.active 
+	{
+		width: 10px;
+		height: 10px;
+		margin: 1px 3px;
+		border-radius: 50%;
+	}
+	.carousel-indicators li 
+	{	
+		background: #999;
+		border-color: transparent;
+		box-shadow: inset 0 2px 1px rgba(0,0,0,0.2);
+	}
+	.carousel-indicators li.active 
+	{	
+		background: #555;		
+		box-shadow: inset 0 2px 1px rgba(0,0,0,0.2);
+	}
+	#testimonial{padding: 40px; background: #ffff;}
+	#testimonial .title{font-size: 60px;text-transform: capitalize;color:#1b001b;
+	text-align: center; margin: 25px 0 20px 0;}
+	.testimonial{color: #1b001b;text-align: center; margin: 20px 0;}
+	.testimonial img{border-radius: 50%; max-width: 200px;}
+	.testimonial h3{ margin: 10px 0; text-transform: uppercase;color:#1b001b;}
+	.testimonial p{line-height: 1.5; width: 75%; margin: 10px auto; 
+	font-weight: lighter;}
+	/* Responsive*/
+	@media screen and (min-width: 576px){.client-center{display: flex; flex-wrap: wrap;
+	 justify-content: space-between;} .testimonial{flex: 0 0 calc(35% - 3em);}}
+	img
+	{
+		width: 200px;
+		height: 180px;
+		border-radius: 50%;
+		margin: 30px;
+		border: 5px solid rgb(170, 156, 156);
+	}
+	 /*-------===========Work out Section=======*/
+	#workout{ background:#4e004e;padding: 40px;}
+	#workout .title{font-size:60px;text-transform: capitalize;color: #f5f5f5;
+	text-align: center;margin: 25px 0 20px 0;}
+	.service{text-align: center;margin: 20px 0;color: #f5f5f5;}
+	.service .fas{padding: 20px; font-size: 50px; cursor:pointer;}
+	.service h3{margin: 10px 0 15 px 0;text-transform: capitalize;font-size: 30px;}
+	.service p{line-height: 1.5; width: 75%; margin: 10px auto;font-weight: lighter;}
+	@media screen and (min-width: 576px){.work-center{max-width: 90vw;margin: 0 auto;
+	display: flex;flex-wrap: wrap;justify-content: space-between;}
+	.service{flex: 0 0 calc(50% - 1em);}
+	}
+	@media screen and (min-width: 776px){.service{flex: 0 0 calc(25% - 1em);}}
+	/*---====================End of Work out section=====*/
+	*{
+		box-sizing: border-box;
+	}
+</style>
+</head>
+<body>
+    <section id="testimonial">
+        <div class="section-center">
+         <!--title-============-->
+         <div>
+            <h3 class="title">SUCCESS STORIES</h3>
+        </div>
+        <!--End of title===================-->
+		<div class="container">
+		<div class="row">
+        <div class="client-center">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+				<!-- Carousel indicators -->
+				<ol class="carousel-indicators">
+					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+					<li data-target="#myCarousel" data-slide-to="1"></li>
+					<li data-target="#myCarousel" data-slide-to="2"></li>
+				</ol>   
+				<!-- Wrapper for carousel items -->
+				<div class="carousel-inner">
+			<!--		<div class="item active"> -->
+			<!--Testimonial Start-->
+        <!--    <article class="testimonial">	-->
+			<div class="item active">
+                <h3>David Dan</h3>
+               <center><img src="img/image1.png" alt="image1"></center>
+                <p>Best training and trainers I have ever had in my life!.Super friendly atmosphere,Every session is different and fun.The trainers really push,motivate and helps us to exceed our limits and achieve our goals.Fitness center is not just like any other fitness facility but like a family!.Highly recommended for all the fitness lovers irrespective of what level you are in.I am definitely coming back!!!</p></div>
+        <!--    </article>		-->
+            <!--end of Testimonial-->
+            <!--Testimonial Start-->
+        <!--    <article class="testimonial">	-->
+			<div class="item">
+                <h3>Peter Pack</h3>
+                <center><img src="img/image2.jfif" alt="image1"></center>
+                <p>Wow, I really recommend this place for you if you want to have some fun while you do your workout! They have an amazing staff that are super serious and makes you reach your goals with a smile on their faces!! Thank you GOLD'S GYM, I will come back as soon as possible!!</p></div>
+        <!--    </article>	-->
+            <!--end of Testimonial-->	
+            <!--Testimonial Start-->
+        <!--    <article class="testimonial">	-->
+			<div class="item">
+                <h3>Joe Job</h3>
+                <center><img src="img/image3.jpg" alt="image1"></center>
+                <p>Awesome facility on an inspiring road. Probably the best facilities available . A great supplement to martial arts training – or an ideal venue for a fitness holiday.</p></div>
+        <!--    </article>	-->
+            <!--end of Testimonial-->
+			<!-- </div> AB-->
+			</div>
+				<!-- Carousel controls -->
+				<a class="carousel-control left" href="#myCarousel" data-slide="prev">
+					<i class="fa fa-angle-left"></i>
+				</a>
+				<a class="carousel-control right" href="#myCarousel" data-slide="next">
+					<i class="fa fa-angle-right"></i>
+				</a>
+			
+        </div></div></div></div></div>
+         </div>
+</section>
+     <!--==============End of Testimonial Section===========-->
+    
+
+<section id="workout">
+	<div class="section-center">
+	 <!--title-============-->
+	 <div class="work-title">
+		 <h3 class="title">Why Work Out here</h3>
+	 </div>
+	 <!--End of title===================-->
+	 <div class="work-center">
+
+             <!--workout detail-->
+             <article class="service">	
+               <i class="fas fa-bolt"></i>
+               <h3>Boost your fitness</h3>
+               <p>Work out regularly and interact with our health experts for best results</p>
+              </article>	
+
+              <article class="service">	
+                <i class="fas fa-leaf"></i>
+                <h3>Mindful training</h3>
+                <p>Receive personal attentions, guidance and customised trainings to suit your fitness goals</p>
+               </article>
+              <!--End of workout===========-->
+              <!--workout detail-->
+              <article class="service">
+                <i class="fas fa-battery-three-quarters"></i>
+                <h3>Core Strength</h3>
+                <p>Our core exercises train the muscles in your pelvis, lower back, hips and abdomen to work in harmony. This leads to better balance and stability, whether on the playing field or in daily activities.</p>
+               </article>	
+              <!--End of workout===========-->
+               <!--workout detail-->
+               <article class="service">
+                <i class="fas fa-smile-beam"></i>
+                <h3>Positivity</h3>
+                <p>When you exercise, your body releases endorphins which lead to feelings of positivity. Also, when you are exercising, you have a clear objective to focus on. As you focus on this objective, your other cares and worries start to drift away.</p>
+               </article>
+              <!--End of workout===========-->
+            </div>
+           </div>
+       </section>
+    
+       <!--=========End of Work out Section===============-->
+</body>
+</html>

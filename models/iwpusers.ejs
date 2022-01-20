@@ -1,0 +1,8 @@
+<h3>My users IDs are: </h3>
+<ul>
+  <% if (typeof usersArray !== 'undefined' && usersArray.length > 0) {%>
+    <%for (var i = 0; i < usersArray.length; i++) { %>
+      <li>ID: <%= usersArray[i]._id %></li>
+    <%}%>
+  <% } %>
+</ul>

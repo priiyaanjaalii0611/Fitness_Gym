@@ -1,0 +1,165 @@
+<HTML>
+<HEAD>
+<TITLE>Make Payments</TITLE>
+<style type = "text/css">
+*, *:before, *:after 
+{
+  box-sizing: border-box;
+  margin:10px 0;
+}
+body 
+{
+  margin:30px;
+  font-size:18px;
+  color:white;
+  padding: 10px;
+  background-color:black;
+}
+.roundc1 
+{
+    border-radius: 30px;
+    background: #5e37bc;
+    padding: 15px; 
+    width: 100%;
+    height: 35%; 
+}
+.roundc2 
+{
+    border-radius: 30px;
+    background: blueviolet;
+    padding: 15px; 
+    width: 100%;
+    height: 35%; 
+}
+.roundc3 
+{
+    border-radius: 30px;
+    background: deeppink;
+    padding: 15px; 
+    width: 100%;
+    height: 35%; 
+}
+/* container */
+label 
+{
+  display:block;
+  margin-bottom:4px;
+  position: relative; /* to contain absolute elements */
+  padding-left:30px; /* free space for custom radio button */
+  cursor: pointer;
+}
+/* hide default radio button  */
+label input[type=radio] 
+{
+  position: absolute; /* prevent taking any space */
+  /* cross-browser hidingg */
+  opactiy: 0;
+  width:0; 
+  height:0;
+}
+/* custom radio button */
+label span 
+{
+  position: absolute;
+  top:0;
+  left:0;
+  width:20px; 
+  height:20px;
+  background-color: #ddd;
+  border-radius: 50%;
+  transition: .3s background-color; /* slight transition */
+}
+/* the check icon */
+label span:after 
+{
+  content: "";
+  position: absolute;
+  display: none;
+  
+  /* middle */
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  background-color:#fff;
+  width:8px;
+  height:8px;
+  border-radius:50%;
+}
+label:hover span 
+{
+  background-color: #ccc;
+}
+label input:checked ~ span 
+{
+  background-color: #2eaadc;
+}
+label input:checked ~ span:after 
+{
+  display:block;
+}
+button 
+{
+  /* remove default behavior */
+  appearance:none;
+  -webkit-appearance:none;
+  /* usual styles */
+  padding:10px 24px;
+  border:none;
+  background-color:#3F51B5;
+  color:#fff;
+  font-weight:600;
+  border-radius:6px;
+  width:100%;
+  font-size: 19px;
+  transition-duration: 0.5s;
+}
+.button:hover 
+{
+    background-color: #41caf4;
+    color: white;
+}
+input[type='radio'] 
+{
+    --active: #275EFE;
+    --active-inner: #fff;
+    --focus: 2px rgba(39, 94, 254, .25);
+    --border: #BBC1E1;
+    --border-hover: #275EFE;
+    --background: #fff;
+    --disabled: #F6F8FF;
+    --disabled-inner: #E1E6F9;
+}
+</style>
+</HEAD>
+<BODY>
+<div class = "roundc1">
+<form role = "form">
+<div class = "form-group">
+<label for ="program">Choose your program</label><br/>
+<input type = "radio" class = "form-control" id = "personal training"> Personal Training Program<br/>
+<input type = "radio" class = "form-control" id = "corporate wellness"> Corporate Wellness Program<br/>
+<input type = "radio" class = "form-control" id = "quick result"> Quick Result Program<br/>
+</div>
+</div>
+<div class = "roundc2">
+<div class = "form-group">
+<label for = "membership">Choose your membership</label><br/>
+<input type = "radio" class = "form-control" id = "full services"> Full Services Membership<br/>
+<input type = "radio" class = "form-control" id = "unlimiited"> Unlimited Class Membership Program<br/>
+<input type = "radio" class = "form-control" id = "equipment only"> Equipment Only Membership<br/>
+<input type = "radio" class = "form-control" id = "none"> None<br/>
+</div>
+</div>
+<div class = "roundc3">
+<div class = "form-group">
+<label for = "passes">Choose your passes</label><br/>
+<input type = "radio" class = "form-control" id = "three month"> Three Month Passes<br/>
+<input type = "radio" class = "form-control" id = "one month"> One Month Passes<br/>
+<input type = "radio" class = "form-control" id = "daily"> Daily Passes<br/>
+<input type = "radio" class = "form-control" id = "none"> None<br/>
+</div>
+</div>
+</form> 
+<a href="IWP_PaymentsPage.html"> <button class = "button"><span>Proceed to Payments</span></button></a>
+</BODY>
+</HTML>

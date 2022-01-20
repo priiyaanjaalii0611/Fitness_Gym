@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<title>Gallery</title>
+<style>
+.contain 
+{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	justify-content: space-around;
+	margin-top: 180px;
+	margin-bottom: 100px;
+}
+h1{
+	font-family: fantasy;
+	font-size:3em;
+	border-bottom:2px solid purple;
+	width:350px;
+	text-align: center;
+	border-right:2px solid purple;
+	box-shadow: 4px 4px 5px grey;
+	margin-top:30px;
+	background: white;
+  border: 6px solid white;
+}
+img 
+{
+	width: 450px;
+	height: 300px;
+	margin:10px;
+	transition: all 0.5s;  
+}
+.contain img:hover 
+{
+	transform: scale(1.1);
+}
+.carousel-inner img 
+{
+    width: 100%;
+    height: 100%;
+}
+#cdiv 
+{
+	width: 54%;
+    margin-left: 21rem;
+	margin-right: 21rem;
+	margin-top: 5rem;
+	margin-bottom: 3rem;		
+}
+#cdiv:before 
+{
+    content: "";
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background: linear-gradient(160deg , #16c9f6 55%, #fff 0%);
+}
+#video
+{
+	width: 100%;
+	height: 700px;
+	background-image: linear-gradient(orange,rgba(240, 89, 44, 0.699) , orange,rgb(212, 107, 21));
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+span 
+{
+	overflow: scroll;
+	max-width: 200px;
+	max-height: 100px;
+	padding: 3px;
+	border-left: 5px solid wheat;
+	font-size: 27px;
+	font-weight: bold;
+	color: white;
+}
+#purple
+{
+	color: purple;
+}
+</style>
+</head>
+<body>
+	<h1>GALLERY</h1><br>
+	<!-- carousel slide -->
+	<div id="cdiv">
+	<div id="demo" class="carousel slide" data-ride="carousel">
+		<ul class="carousel-indicators">
+			<li data-target="#demo" data-slide-to="0" class="active"></li>
+			<li data-target="#demo" data-slide-to="1"></li>
+			<li data-target="#demo" data-slide-to="2"></li>
+		</ul>
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+				<img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjZ8fGZpdG5lc3N8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&w=1000&q=80" alt="Fitness-image1" width="700px" height="200px">
+				<div class="carousel-caption">
+					<h3>Push your fitness further</h3>
+					<p>With our mix of facilities and we'll support you with advice on new and better ways to train.</p>
+				</div>   
+			</div>
+			<div class="carousel-item">
+				<img src="https://i.pinimg.com/originals/be/38/4e/be384eb64450ee27df1427966670283c.jpg" alt="image2" width="1100" height="500">
+				<div class="carousel-caption">
+					<h3>A PLACE FOR WORKOUT</h3>
+					<p>BE AMAZED WITH YOUR BODY</p>
+				</div>   
+			</div>
+			<div class="carousel-item">
+				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAgGsQrPQ-lTgT0Rj4qGl14uj5_7UB2dVgig&usqp=CAU" alt="fitness" width="1100" height="500">
+				<div class="carousel-caption">
+					<h3>BODY AND MIND WELLNESS</h3>
+					<p>We love whole-body wellness rather than just physical fitness</p>
+				</div>   
+			</div>
+		</div>
+		<a class="carousel-control-prev" href="#demo" data-slide="prev">
+			<span class="carousel-control-prev-icon bg-primary"></span>
+		</a>
+		<a class="carousel-control-next" href="#demo" data-slide="next">
+			<span class="carousel-control-next-icon bg-primary"></span>
+		</a>
+	</div>
+</div>
+	<!-- ***images-flex*** -->
+	<div class="contain">
+		<img src="https://bloximages.chicago2.vip.townnews.com/gazettetimes.com/content/tncms/assets/v3/editorial/0/2c/02c97069-5119-598c-895d-1a0927c0b5d7/5e531a0e15bd8.image.jpg?crop=1736%2C977%2C0%2C108&resize=1736%2C977&order=crop%2Cresize">
+		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3Qu34JihVxaJ0yFVWkHnvQOE9CUGPMtfYWw&usqp=CAU">
+		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVyxn-kmA94mmbi41rTIm0bQ99csUwfMF_6Q&usqp=CAU">
+		<img src="https://www.pupnmag.com/wp-content/uploads/2017/01/CleaningGymEquip0117.jpg">
+		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9SzylVYxP6nvzCLWK1rYDzqgDVismP5EUNw&usqp=CAU">
+		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4Eb7hIh2yyOF6l8sQsYaSLGmJZPouDv9oiQ&usqp=CAU">
+		<img src="https://www.gvsu.edu/gvnext/files/img/article/90457888-E310-1E83-4EFFC3FD639B69D0/9068025F-FEC0-C4AF-56A90C758EE52B1E/1200.jpg">
+		<img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/people-using-weight-machines-in-fitness-center-royalty-free-image-175137901-1544543871.jpg">
+		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8NT8seqgzwCg-OTNdk1rXS6xbNzDGaXRWOU1XpmSCADfUhzVqVbF1U8aXk_E4sW8D_kE&usqp=CAU">
+		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxrpPhVztB4m32SLjx0PwyZG4wWSR4lVPctA&usqp=CAU">
+    </div>
+	<div id="video">
+			<h2><span id="text">It’s time for a change again, <div>and this time, our call is to </div><div id="purple">“Let’s make health happen“</div></span></h2>
+		<iframe width="660" height="415" src="https://www.youtube.com/embed/ayoGikYREDY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+</body>
+</html>

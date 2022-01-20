@@ -1,0 +1,143 @@
+<HTML>
+<HEAD>
+<TITLE>News Page</TITLE>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+	:root
+	{
+		--blue:#1a1aff;
+	}
+	*{
+		font-family: 'Open Sans', sans-serif;
+		margin:0; padding: 0;
+		box-sizing: border-box;
+		transition: all .2s linear;
+		text-transform: capitalize;
+		outline: none;
+		text-decoration: none;		
+	}
+	*::selection
+	{
+		background:var(--blue);
+		color:#fff;
+	}
+	html
+	{
+		font-size: 62.5%;
+		overflow-x: hidden;
+	}
+	.heading
+	{
+		display: inline-block;
+		color:#333;
+		margin:2rem 0;
+		padding:1rem 0;
+		padding-top: 8rem;
+		font-size: 3rem;
+		border-bottom: .2rem solid var(--blue);
+	}
+	.btn
+	{
+		cursor: pointer;
+		border:.2rem solid var(--blue);
+		color:var(--blue);
+		background:none;
+		padding:.5rem 3rem;
+		margin-top: 1rem;
+		position: relative;
+		z-index: 0;
+		font-size: 2rem;
+	}
+	.btn::before
+	{
+		content: '';
+		position: absolute;
+		top:0; left: 0;
+		height:100%;
+		width:100%;
+		background:var(--blue);
+		z-index: -1;
+		clip-path: circle(0% at 0% 0%);
+		transition: .3s;
+	}
+	.btn:hover::before
+	{
+		clip-path: circle(100%);
+	}
+	.btn:hover
+	{
+		color:#fff;
+	}
+	.plan
+	{
+		min-height: 100vh;
+		text-align: center;
+		background:#eee;	
+	}
+	.plan .box-container
+	{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;	
+	}
+	.plan .box-container .box
+	{
+		background:#fff;
+		margin:2rem;
+		width:30rem;
+		box-shadow: 0 .3rem .5rem rgba(0,0,0,.3);
+	}
+	.plan .box-container .box:hover
+	{
+		transform: scale(1.04);
+	}
+	.plan .box-container .box .title
+	{
+		font-size: 2.5rem;
+		background:var(--blue);
+		color:#fff;
+		padding:1rem 0;
+	}
+	.plan .box-container .box .btn
+	{
+		margin-bottom: 3rem;
+	}
+	.plan .box-container .box .content
+	{
+		margin:2rem 8rem;
+		list-style: none;
+		font-size : 1.8rem;
+		text-align: justified;
+		padding:.5rem 0;
+	}
+</style>
+</HEAD>
+<BODY>
+    <section class="plan" id="plan">
+        <h1 class="heading">Welcome to the News Page</h1>
+        <div class="box-container">
+            <div class="box">
+                <h3 class="title">Latest Updates</h3>
+                <h3 class="content">Know about all new events, rules and regulations and important notices</h3>
+                <a href="#"><button class="btn">View Updates</button></a>
+            </div>
+            <div class="box">
+                <h3 class="title">Articles and blogs</h3>
+                <h3 class="content">Get inspired by our amazing blogs and insightful articles</h3>
+                <a href="#"><button class="btn">Read articles</button></a>
+            </div>
+            <div class="box">
+                <h3 class="title">Program Schedules</h3>
+                <h3 class="content">Check the batches and slot timimgs for all programs</h3>
+                <a href="#"><button class="btn">Check schedules</button></a>
+            </div>
+		<div class="box">
+                <h3 class="title">Ask the Experts</h3>
+				<h3 class="content">Ask any fitness related doubts and our health experts will answer them</h3>
+                <a href="#"><button class="btn">Ask doubts</button></a>
+            </div>
+        </div>
+    </section>
+</BODY>
+</HTML>

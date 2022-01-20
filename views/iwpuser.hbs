@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<h3>My users IDs are: </h3>
+<p id="fullname"> </p>
+<%  data.fullname %>
+
+<ul>
+  <% if (typeof usersArray !== 'undefined' && usersArray.length > 0) {%>
+    <%for (var i = 0; i < usersArray.length; i++) { %>
+      <li>ID: <%= usersArray[i]._id %></li>
+    <%}%>
+  <% } %>
+</ul>
+</body>
+</html>
